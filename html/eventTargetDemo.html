@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义事件处理</title>
+</head>
+<body>
+
+
+<script type="text/javascript" src="../scripts/EventTarget.js"></script>
+<script type="text/javascript">
+    var target = new SelfEventTarget();
+    function handleMessage(event) {
+        console.log("Message received:" + event.message);
+    }
+    target.addHandlers('message', handleMessage);
+    target.fire({type: 'message', message: 'Fire message!'});
+    target.removeHandler('message', handleMessage);
+    target.fire({type: 'message', message: 'Fire message again!'});
+</script>
+</body>
+</html>

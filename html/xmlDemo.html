@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC
+        "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/XML/1998/namespace">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xml Demo</title>
+</head>
+<body>
+
+<!--<script type="text/javascript" src="../scripts/xmlDemo.js"></script>-->
+<script type="text/javascript ; e4x=1">
+    var xmlMusic = new XML();
+    xmlMusic = <mp3>
+                  <music genre="classical">
+                     <artist>Ludwig van Beethoven</artist>
+                     <song>Fifth Symphony</song>
+                  </music>
+                  <music genre="jazz">
+                     <artist>Grover Washington, Jr.</artist>
+                     <song>The Best Is Yet to Come</song>
+                  </music>
+                  <music genre="classical">
+                     <artist>Johann Sebastian Bach</artist>
+                     <song>Double Concerto in D- for Two Violins</song>
+                  </music>
+                  <music genre="jazz">
+                     <artist>Dave Brubeck</artist>
+                     <song>Take Five</song>
+                     <song>Truth Is Fallen</song>
+                  </music>
+                  <music genre="classical">
+                     <artist>Johannes Brahms</artist>
+                     <song>Piano Sonata No. 1 in C major</song>
+                  </music>
+               </mp3>
+    console.log(xmlMusic.toString());
+    document.write(xmlMusic.toXMLString());
+</script>
+</body>
+</html>

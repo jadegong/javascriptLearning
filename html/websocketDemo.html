@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    function websocketConnect() {
+        var socket = new WebSocket('ws://127.0.0.1:8080/websocket');
+        socket.onmessage = function (event) {
+            var data = event.data;
+            var div = document.createElement('div');
+            div.innerText = data;
+            document.body.appendChild(div);
+            if (data.toString() === '5') {
+                socket.close();
+                return;
+            }
+            setTimeout(function () {
+                socket.send(data);
+            }, 1000);
+        };
+        // socket.onopen = function () {
+        //     socket.send('0');
+        // };
+    }
+    websocketConnect();
+</script>
+</body>
+</html>
