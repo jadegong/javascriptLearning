@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+<style type="text/css" media="screen">
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#content {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+}
+.dis-inline-block {
+  display: inline-block;
+  margin: 0;
+  line-height: 2;
+  padding: 12px;
+  width: 120px;
+  height: 200px;
+  font-size: 14px;
+}
+.image-border {
+  border: 10px solid;
+  border-image-source: url("../assets/files/nine-slices.png");
+  border-image-slice: 33.333333%;
+  border-image-width: 1;
+  border-image-repeat: space;
+}
+.dis-inline-block.image-border {
+  width: 600px;
+  height: 120px;
+}
+.dis-inline-block.outline-style {
+  width: 400px;
+}
+.dis-inline-block.outline-style > p {
+  margin: 10%;
+}
+.dis-inline-block.outline-style span {
+  outline: 1px dotted gray;
+}
+</style>
+</head>
+<body>
+<div id="content">
+  <div class="container">
+    Front text <p class="dis-inline-block">this is a paragraph.</p><span style="vertical-align: bottom; font-size: 14px;"> back text.</span>
+  </div>
+  <div class="container">
+    <p class="dis-inline-block image-border">this is a very long long long long long long long long long long long paragraph.</p>
+  </div>
+  <div class="container">
+    <div class="dis-inline-block outline-style">
+      <p>some else words <span>this is a very long long long long long long long long long long long paragraph.</span> some else words </p>
+      <p>some else words <span>this is a very long long long long long long long long long long long paragraph.</span> some else words </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
