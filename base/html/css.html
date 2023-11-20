@@ -29,9 +29,10 @@ html, body {
 }
 .image-border {
   border: 10px solid;
-  border-image-source: url("../assets/files/nine-slices.png");
+  /* border-image-source: url("../assets/files/nine-slices.png"); */
+  border-image-source: linear-gradient(90deg, #376ee8 0, #376ee8 16px, #ffffff 32px);
   border-image-slice: 33.333333%;
-  border-image-width: 1;
+  border-image-width: 4px;
   border-image-repeat: space;
 }
 .dis-inline-block.image-border {
@@ -47,6 +48,13 @@ html, body {
 .dis-inline-block.outline-style span {
   outline: 1px dotted gray;
 }
+.dis-inline-block.gradient-style {
+  width: 500px;
+  height: 240px;
+  border: 1px solid;
+  background: repeating-radial-gradient(40px 20px at center, green 0, blue 20px, yellow 40px);
+  box-shadow: 0 0px 10px 10px #333;
+}
 </style>
 </head>
 <body>
@@ -61,6 +69,10 @@ html, body {
     <div class="dis-inline-block outline-style">
       <p>some else words <span>this is a very long long long long long long long long long long long paragraph.</span> some else words </p>
       <p>some else words <span>this is a very long long long long long long long long long long long paragraph.</span> some else words </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="dis-inline-block gradient-style">
     </div>
   </div>
 </div>
